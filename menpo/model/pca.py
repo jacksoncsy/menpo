@@ -528,7 +528,7 @@ class PCAModel(MeanInstanceLinearModel):
 
         # compute incremental pca
         e_vectors, e_values, m_vector = ipca(
-            data, self._components, self._eigenvalues, self.n_samples,
+            data, self.components, self.eigenvalues, self.n_samples,
             m_a=self.mean_vector, f=forgetting_factor)
 
         # if the number of active components is the same as the total number
